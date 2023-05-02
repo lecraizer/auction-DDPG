@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt 
 import numpy as np
+import os
 
 def plotLearning(scores, filename, x=None, window=5):   
     N = len(scores)
@@ -52,4 +53,10 @@ def manualTesting(agent, N, k, n_episodes, auc_type='first_price'):
     axes.set_xlim([0, 1])
     axes.set_ylim([0, 1])
 
-    plt.savefig('results/' + auc_type + '/N=' + str(N) + '/test' + str(int(n_episodes/1000)) + 'k_' + str(k) + '.png')
+    try:
+        plt.savefig('results/' + auc_type + '/N=' + str(N) + '/test' + str(int(n_episodes/1000)) + 'k_' + str(k) + '.png')
+    except:
+        # create folder
+        os.mkdir('results/' + auc_type + '/N=' + str(N))
+        os.mkdir('test/' + auc_type + '/N=' + str(N))
+        plt.savefig('results/' + auc_type + '/N=' + str(N) + '/test' + str(int(n_episodes/1000)) + 'k_' + str(k) + '.png')
