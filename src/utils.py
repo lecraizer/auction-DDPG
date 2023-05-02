@@ -56,7 +56,5 @@ def manualTesting(agent, N, k, n_episodes, auc_type='first_price'):
     try:
         plt.savefig('results/' + auc_type + '/N=' + str(N) + '/test' + str(int(n_episodes/1000)) + 'k_' + str(k) + '.png')
     except:
-        # create folder
         os.mkdir('results/' + auc_type + '/N=' + str(N))
-        os.mkdir('test/' + auc_type + '/N=' + str(N))
         plt.savefig('results/' + auc_type + '/N=' + str(N) + '/test' + str(int(n_episodes/1000)) + 'k_' + str(k) + '.png')
