@@ -1,5 +1,5 @@
 # About
-Single and multiagent auction simulation using deep reinforcement learning algorithms
+Single agent auction simulation using deep reinforcement learning algorithm DDPG (Deep Deterministic Policy Gradient).
 
 # Deep RL in Auction Theory 
 
@@ -33,4 +33,4 @@ pip install -r requirements.txt
 ```bash
 python src/main.py -e <number of episodes> -n <number of players> -b <batch size> -p <ponderated average size> -a <type of auction> -z <number of executions> -s <save test results in a plot> -t <use alert .mp3 file>
 ```
-where the arguments may be passed after the __main.py__ call, as described above, otherwise the default parameters will be selected
+where the arguments may be passed after the __main.py__ call, as described above, otherwise the default parameters will be selected.
