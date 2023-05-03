@@ -1,3 +1,4 @@
+# General modules
 import timeit
 import numpy as np
 import matplotlib.pyplot as plt
