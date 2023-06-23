@@ -116,6 +116,7 @@ class ActorNetwork(nn.Module):
         # x = self.bn2(x)
         # x = F.relu(x)
         x = T.sigmoid(self.mu(x))
+        # x = self.mu(x)
         # x = T.tanh(self.mu(x))
 
         return x

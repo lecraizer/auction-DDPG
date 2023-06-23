@@ -40,9 +40,16 @@ def manualTesting(agent, N, k, n_episodes, auc_type='first_price'):
     if auc_type == 'first_price':
         plt.plot(states, states*(N-1)/N, color='brown', linewidth=0.5)
         plt.title('First Price Auction for ' + str(N) + ' players')
-    else:
+    elif auc_type == 'second_price':
         plt.plot(states, states, color='brown', linewidth=0.5)
         plt.title('Second Price Auction for ' + str(N) + ' players')
+    
+    
+    elif auc_type == 'common':
+        plt.plot(states, states, color='brown', linewidth=0.5)
+        plt.title('Common Value Auction for ' + str(N) + ' players')
+
+
     plt.text(0.02, 0.94, 'Avg error: %.3f' % avg_error, fontsize=10, color='#696969')
     plt.legend(['Expected bid', 'Agent bid'], loc='lower right')   
     plt.xlabel('State (Value)')
